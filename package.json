@@ -1,0 +1,28 @@
+{
+  "name": "driversapp",
+  "version": "1.0.0",
+  "description": "\"learning mongoose + mongo with Node\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test nodemon --exec \"mocha --recursive -R min\" ",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tab-Al/Driver-App-Mongoose-Node-.git"
+  },
+  "author": "'Tab-Al'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tab-Al/Driver-App-Mongoose-Node-/issues"
+  },
+  "homepage": "https://github.com/Tab-Al/Driver-App-Mongoose-Node-#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "mocha": "^8.0.1",
+    "mongoose": "^5.9.18",
+    "supertest": "^4.0.2"
+  }
+}
