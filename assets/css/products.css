@@ -1,0 +1,116 @@
+
+.filter
+{
+  width: 20%;
+  padding: 25px;
+  height: auto;
+  position: relative;
+  float: left;
+  background-color: #191919;
+  border: 2px solid #FFF056;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.range
+{
+  max-width: 50px;
+  font-size: 10px;
+}
+
+.products-list
+{
+  text-align: center;
+  height: auto;
+  width: 73%;
+  float: right;
+  margin-top: 20px;
+  background-color: #191919;
+  text-align: center;
+  border: 2px solid #FFF056;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.product
+{
+  padding: 5px;
+  /*background-color: rgba(255,255,255,0.8)*/
+  background-color: white;
+  margin-left: 5%;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: left;
+  color: black;
+  width: 25%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  border: 2px solid #FFF056;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.product p
+{
+  border-bottom: 1px solid green;
+}
+
+.img
+{
+  width: 200px;
+  height: 150px;;
+  margin-top: 20px;
+  max-width: 80%;
+  max-height: 200px;
+  position: relative;
+  border-bottom: 1px solid green;
+}
+.img:hover
+{
+  opacity: 0.5;
+}
+
+.filter-list
+{
+  margin-top: 20px;
+  width: 71%;
+  float: right;
+  padding: 15px;
+  background-color: #191919;
+  border: 2px solid #FFF056;
+  border-radius: 10px;
+  color: white;
+}
+.filter-list p
+{
+  float: left;
+  background-color: #FFF056;
+  margin-top: 0px;
+  padding: 20px;
+  margin-right: 20px;
+  color: #191919;
+}
+
+input[type=text]
+{
+  border: 1px solid #FFF056;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 0px;
+}
+
+.subfilter
+{
+  padding: 20px;
+  border: 2px dotted #FFF056;
+}
+#disfilter
+{
+  float: left;
+  padding: 15px 20px;
+  border: 1px solid #FFF056;
+  border-radius: 5px;
+  width: 100%;
+}

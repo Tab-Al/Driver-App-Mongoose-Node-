@@ -1,13 +1,8 @@
 const mongoose = require('mongoose');
-const PointSchema = new mongoose.Schema({
-	type : {
-		type : String,
-		default : 'Point'
-	},
-	coordinates : {
-		type : [Number]
-	}
-});
+
+mongoose.set('useCreateIndex', true);
+
+const PointSchema = require('./pointSchema');
 
 const DriverSchema = new mongoose.Schema({
 
@@ -15,17 +10,31 @@ const DriverSchema = new mongoose.Schema({
 		type : String,
 		required : true
 	},
+
+	password : {
+		type : String,
+		required : true
+	},
+
 	driving : {
 		type : Boolean,
 		default : false
 	},
 	geometry : {
 		type : PointSchema,
-		index : "2dsphere"
-	}
+		index : "2dsphere",
+		default : { type : 'Point', coordinates : [10,20] }
+	},
+	trips : [{
+		type : mongoose.Schema.Types.ObjectId,
+		ref : 'trip'		
+	}]
 
 });
 
+DriverSchema.virtual('tripCount').get(function(){
+	return this.trips.length;
+});
 
 const Driver = mongoose.model('driver', DriverSchema);
 

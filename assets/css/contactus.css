@@ -1,0 +1,48 @@
+.contact-box
+{
+  background-color: #191919;
+  height: auto;
+  padding: 50px;
+  color: white;
+  margin-top: 20px;
+}
+
+.leave-msg
+{
+  padding: 20px;
+  position: relative;
+}
+
+@media screen and (max-width:900px)
+{
+  .dropdown
+  {
+    width:100%;
+  }
+
+  #search
+  {
+    display: none;
+  }
+
+  .dropdown-content
+  {
+    position: relative;
+    width: 100%;
+  }
+
+  .header-right
+  {
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+}
+
+.contact-form
+{
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 300px;
+}

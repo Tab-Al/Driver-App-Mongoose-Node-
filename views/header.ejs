@@ -1,0 +1,181 @@
+<style type="text/css">
+		
+		.nav-link{
+			padding-right: 1rem !important;
+			padding-left: 1rem !important;
+			margin-left: 1rem !important;
+
+		}
+		.active{
+			background-color: #ffc107;
+		}
+		.active:hover
+		{
+			background-color: #fd7e14;
+		}
+		.profile-pic
+		{
+			position: block;
+			height: 30px;
+			vertical-align: center;
+			padding-right: 10px;
+			margin-top: -20px;
+			margin-bottom: -18px;
+			margin-left: -5px;
+		}
+
+</style>
+
+<nav class="navbar navbar-dark fixed-top bg-dark">
+	  <div class="container">
+	    
+	    <a 
+	    	class="navbar-brand mb-0" 
+	    	href="/">
+	    	The <strong>Notes</strong> Gallery
+	    </a>
+	    
+	    <ul class="navbar-nav ml-auto flex-row">
+	     	<% if (user) { %>
+				<% if(session.cart) { %>
+					<li class="nav-item">
+					<a 
+						href="/cart"
+						class="nav-link active rounded"
+						style="color:#000;">
+						<i class="fas fa-shopping-cart"></i>
+						<span>Cart :
+							<span class="badge badge-dark"> 
+								<%= session.cart.totalQty %>
+							</span>
+						</span>
+					</a>
+					</li>
+				<% } %>
+				<% if(!session.cart) { %>
+					<li class="nav-item">
+					<a 
+						href="/cart"
+						class="nav-link active rounded"
+						style="color:#000;">
+						<i class="fas fa-shopping-cart"></i>
+						Cart: <span class="badge badge-dark">0
+					</a>
+					</li>
+				<% } %>
+				<li class="nav-item">
+				<a 
+					href="/users/"
+					class="nav-link active rounded"
+					style="color:#000;">
+					<!--<i class="fas fa-user"></i>-->
+					<% if (user.profilePic) {%>
+						<img class="profile-pic" src="<%=user.profilePic%>" alt="">
+					<% }else{ %>
+						<i class="fas fa-user"></i>
+					<% } %>
+					<%=  user.username %>
+				</a>
+				</li>
+				<li class="nav-item">
+				<a 
+					href="/login/logout"
+					class="nav-link active rounded"
+					style="color:#000;">
+					<i class="fas fa-sign-out-alt"></i>
+						Logout
+				</a>
+				</li>
+
+			<% } else { %>
+					
+					<li class="nav-item">
+					<a 
+						href="/login" 
+						class="nav-link active rounded"
+						style="color:#000;">
+						<span class="glyphicon glyphicon-user"></span>Login
+					</a>
+					</li>
+					
+					<li class="nav-item">
+		    		<a 
+		    			href="/login/signup" 
+		    			class="nav-link active rounded" 
+		    			style="color:#000;">
+		    			<span class="glyphicon glyphicon-user"></span>Signup
+		    		</a>
+		    		</li>
+
+			<% } %>
+	    </ul>
+	  </div>
+</nav>
+
+<!--
+
+<div class="navbar">
+	<div class="dropdown">
+		<button class="dropbtn" id="10">Laptops</button>
+		<div class="dropdown-content" onmouseover="changecolor(10)" onmouseout="changecolor(10)">
+			<a href="#">Best Sellers in Laptops</a>
+			<a href="#">New Arrivals in Laptops</a>
+			<a href="/laptops?brand=All&pricefrom=0&priceto=100000&discount=0">View All in Laptops</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn" id="20">TVs</button>
+		<div class="dropdown-content" onmouseover="changecolor(20)" onmouseout="changecolor(20)">
+			<a href="#">Best Sellers in TV</a>
+			<a href="#">New Arrivals in TV</a>
+			<a href="#">View All in TV</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn" id="30">Mobiles</button>
+		<div class="dropdown-content" onmouseover="changecolor(30)" onmouseout="changecolor(30)">
+			<a href="#">Best Sellers in Mobiles</a>
+			<a href="#">New Arrivals in Mobiles</a>
+			<a href="/mobiles?brand=All&pricefrom=0&priceto=100000&discount=0">View All in Mobiles</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn" id="40">Headphones</button>
+		<div class="dropdown-content" onmouseover="changecolor(40)" onmouseout="changecolor(40)">
+			<a href="#">Best Sellers in Headphones</a>
+			<a href="#">New Arrivals in Headphones</a>
+			<a href="#">View All in Headphones</a>
+		</div>
+	</div>
+
+	<a href="/contactus" class="dropdown">Contact Us</a>
+
+	<div id="search">
+		<form action="#" >
+			<input type="text" placeholder="Search..." name="searchterm" required>
+		</form>
+	</div>
+</div>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext" style="color: black;">1 / 3</div>
+    <img src="/images/extra/iphone_banner.jpg" style="width:100%; height: 200px;">
+  </div>
+
+	<div class="mySlides fade">
+    <div class="numbertext" style="color: white;">2 / 3</div>
+    <img src="/images/extra/banner3.jpg" style="width:100%; height: 200px;">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext" style="color: white;">3 / 3</div>
+    <img src="/images/extra/banner2.png" style="width:100%; height: 200px;">
+  </div>
+
+	<a class="prev" onclick="shownext(-1)">&#10094;</a>
+  <a class="next" onclick="shownext(1)">&#10095;</a>
+</div>
+<br>
+-->

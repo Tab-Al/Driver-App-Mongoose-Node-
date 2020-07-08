@@ -1,0 +1,82 @@
+.choose_method
+{
+  float: left;
+  max-width: 30%;
+  border: 2px solid #FFF056;
+  padding: 20px 20px 0px 20px;
+  z-index: 1;
+  margin-top: 40px;
+  color: white;
+  font-size: 25px;
+}
+.choose_method p
+{
+  font-weight: normal;
+  padding-bottom: 0px;
+}
+
+.order-info
+{
+  text-align: right;
+  float: right;
+  font-size: 20px;
+  border: 2px solid #FFF056;
+  border-radius: 5px;
+  margin-right: 20px;
+  max-width: 20%;
+  padding: 20px;
+  color: white;
+  margin-top: 40px;
+}
+
+#heading
+{
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+
+}
+
+.method
+{
+  display: none;
+  height: auto;
+  border: 2px solid #FFF056;
+  padding: 30px;
+  margin-left: 340px;
+  margin-right: 340px;
+  position: relative;
+  margin-top: 50px;
+  color: white;
+}
+a
+{
+  color: #FFF056;
+}
+a:visited
+{
+  color: #FFF056;
+}
+
+.method input[type=text],input[type=password]
+{
+  padding: 15px 20px;
+  font-size: 20px;
+  margin: 10px;
+  border: 1px dotted #191919;
+}
+
+.active
+{
+  border-bottom: 2px solid red;
+}
+
+.but
+{
+  padding: 20px;
+  color: #191919;
+  background-color: #FFF056;
+  margin-top: 20px;
+  margin-left: 10px;
+}
