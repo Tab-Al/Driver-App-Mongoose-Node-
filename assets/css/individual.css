@@ -1,0 +1,52 @@
+.left{
+        margin: 30px 60px;
+        padding: 40px 80px;
+        width:30%;
+        float: right;
+        border: 3px solid #191919;
+        background-color: inherit;
+        color: white;
+        border-radius: 5px;
+}
+.product_image
+{
+        margin: 30px 60px;
+        padding: 40px 0px;
+        width:30%;
+        border: 3px solid #191919;
+        float: left;
+}
+.heading
+{
+        color: white;
+        text-align: center;
+        font-size:40px;
+        margin-top: 20px;
+        background-color: #191919;
+}
+.button
+{
+    background-color:  #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1
+{
+    background-color:  #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }

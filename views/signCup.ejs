@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Driver SignUp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" 
+          content="">
+    <meta name="author" 
+          content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    
+    <script src = "/js/bootstrap.min.js"></script>
+    <script src = "/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>  
+    <!-- Bootstrap core CSS -->
+    <!-- Custom styles for this template -->
+    <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+      rel="stylesheet" 
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+      crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+  </head>
+  
+  <body style="background-color:black;">
+        <% include('header.ejs') %>
+        <form class="form-signin" action="/crud/create/c" method="POST">
+  
+          <h1 class="h3 mb-3 font-weight-normal text-center" style="color:white;"><br>Driver Sign Up</h1>
+          <br>
+          
+          <div class="form-label-group">
+          <input
+            name="email"
+            type="email" 
+            id="inputEmail" 
+            class="form-control" 
+            placeholder="Email address" 
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+            required 
+            autofocus
+          >
+          <label for="inputEmail">Email address</label>
+        </div>
+        
+        <div class="form-label-group">
+          
+          <input 
+            name="name"
+            type="text" 
+            id="inputEmail" 
+            class="form-control" 
+            placeholder="To : (enter longitude, latitude)" 
+            value = "<%= typeof password != 'undefined' ? password : '' %>"
+            required
+          >
+          <label for="inputUsername">Name</label>
+        </div>
+        <div class="form-label-group">
+          
+          <input 
+            name="fromlng"
+            type="number" 
+            id="inputEmail" 
+            class="form-control" 
+            placeholder="From (longitude) : " 
+            value = "<%= typeof password != 'undefined' ? password : '' %>"
+            required
+          >
+          <label for="inputUsername">From Longitude</label>
+        </div>
+        <div class="form-label-group">
+          
+          <input 
+            name="fromlat"
+            type="number" 
+            id="inputEmail" 
+            class="form-control" 
+            placeholder="From (longitude) : " 
+            value = "<%= typeof password != 'undefined' ? password : '' %>"
+            required
+          >
+          <label for="inputUsername">From Latitude</label>
+        </div>
+        <div class="form-label-group">
+          
+          <input 
+            name="tolng"
+            type="number" 
+            id="inputEmail" 
+            class="form-control" 
+            placeholder="From (longitude) : " 
+            value = "<%= typeof password != 'undefined' ? password : '' %>"
+            required
+          >
+          <label for="inputUsername">To Longitude</label>
+        </div>
+        <div class="form-label-group">
+          
+          <input 
+            name="tolat"
+            type="number" 
+            id="inputEmail" 
+            class="form-control" 
+            placeholder="From (longitude) : " 
+            value = "<%= typeof password != 'undefined' ? password : '' %>"
+            required
+          >
+          <label for="inputUsername">To Latitude</label>
+        </div>
+          <br>
+          <!--
+          <div class="checkbox mb-3">
+            <label>
+              <input 
+                type="checkbox" 
+                value="remember-me"
+              > Remember me
+            </label>
+          </div> -->
+          <button class="btn btn-lg btn-info btn-block" type="submit">Submit</button>
+          
+          <br><br>
+          <p class="mt-5 mb-3 text-muted text-center">&copy; Made by Tabish Aleem, 2019-20</p>
+    </form>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+      });
+    </script>
+</body>
+
+</html>

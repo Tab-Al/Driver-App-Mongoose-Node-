@@ -1,0 +1,42 @@
+.item
+{
+  padding-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  color: white;
+  background-color: #191919;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #FFF056;
+}
+
+.main_box
+{
+  width: 60%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.checkout_box
+{
+  float: right;
+  width: 30%;
+  padding-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  color: white;
+  background-color: #191919;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #FFF056;
+}
+
+.checkout_button
+{
+  padding: 20px;
+  background-color: #FFF056;
+  color: black;
+  margin-bottom: auto;
+}

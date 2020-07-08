@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html lang="en">
+  
+  <head>
+    
+    <title>Driver Login</title>
+
+    <meta name="google-signin-client_id" 
+        content="133271211780-156k3qvtii05o3ic8it4bm8lbaifq85v.apps.googleusercontent.com">
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" 
+          content="">
+    <meta name="author" 
+          content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" 
+          content="Jekyll v3.8.5">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet">
+
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+      rel="stylesheet" 
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+      crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link href="/css/login.css" rel="stylesheet">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body style="background-color:black;">
+        <% include('header.ejs') %>
+
+        <form class="form-signin" action='/login/d' method="POST">
+          <h1 class="h2 mb-3 font-weight-normal text-center" style="color:white;">Driver Login</h1>
+          <br>
+  
+          <div class="form-label-group">
+            <input 
+              type="email" 
+              id="inputEmail" 
+              name="email"
+              class="form-control" 
+              placeholder="Email address" 
+              required 
+              autofocus
+            >
+            <label for="inputEmail" >Email address</label>
+          </div>
+
+          <div class="form-label-group">
+            <input 
+              type="password"
+              name="password" 
+              id="inputPassword" 
+              class="form-control" 
+              placeholder="Password" 
+              required
+            >
+            <label for="inputPassword">Password</label>
+          </div>
+
+          <!--
+          <div class="checkbox mb-3">
+            <label>
+              <input 
+                type="checkbox" 
+                value="remember-me"
+              > Remember me
+            </label>
+          </div>
+          -->
+
+          <br>
+          <button 
+            class="btn btn-lg btn-info btn-block" 
+            type="submit">Submit
+          </button>
+          
+            
+          <div class="d-flex">
+            <h6 class="mt-3 mb-3 text-muted text-left" >New Driver?
+              <a href="/signup/d">Sign Up</a>
+            </h6>
+              <a href="/login/facebook"
+                class="btn btn-lg btn-outline-primary ml-auto mt-3"
+                data-toggle="tooltip" title="Login using Facebook">
+                <i class="fab fa-facebook-f" style="color:white;"></i>           
+            </a>
+          </div>
+        
+          <!--  
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          <script>
+            function onSignIn(googleUser) {
+                  var profile = googleUser.getBasicProfile();
+                  console.log(profile);
+                  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                  console.log('Name: ' + profile.getName());
+                  console.log('Image URL: ' + profile.getImageUrl());
+                  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+          }
+          </script>
+          -->
+          
+          <br><br>
+          <p class="mt-5 mb-3 text-muted text-center">&copy; Made by Tabish Aleem, 2019-20</p>
+          
+    </form>
+    
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+      });
+    </script>
+    
+</body>
+</html>
